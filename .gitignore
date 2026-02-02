@@ -1,0 +1,9 @@
+cypress/screenshots/*
+.vscode/settings.json
+node_modules/**/*
+allure-results/*
+cypress/videos/*
+allure-report/*
+cucumber-json
+results/*
+log/*

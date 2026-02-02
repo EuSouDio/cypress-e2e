@@ -1,0 +1,7 @@
+{
+   "failMsgSignup"         : "Your email or password is incorrect!"              ,
+   "failMsgCreateAccount"  : "Email Address already exist!"                      ,
+   "MsgAccountCreated"     : "Account Created!"                                  ,
+   "MsgDescriptionCheckout": "Tamanho do Blue top deve ser M"                    ,
+   "MsgSucessPlaced"       : "Congratulations! Your order has been confirmed!"   
+}

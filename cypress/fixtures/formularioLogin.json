@@ -1,0 +1,22 @@
+{
+    "nameSignup"        : "Dio Teste"                                   ,
+    "informationName"   : "Dionisio Teste"                              ,
+    "infomationPassword": "123456"                                      ,
+    "informationDay"    : "6"                                           ,
+    "informationMonth"  : "September"                                   ,
+    "informationYear"   : "1982"                                        ,
+    "adressName"        : "Dionisio"                                    , 
+    "adressLastName"    : "Teste Automação"                             ,
+    "adressCompany"     : "Minha Automacao"                             ,
+    "adress"            : "Rua da automacao, 22 - Bobotization"         ,
+    "adress2"           : "Campo de endereço para segunda informação"   ,
+    "adressCountry"     : "United States"                               ,
+    "adressState"       : "Ohio"                                        ,
+    "adressCity"        : "Oclaroma"                                    ,
+    "adressZipcode"     : "58000000"                                    ,
+    "adressPhone"       : "83981255238"                                 ,
+    "subjectTitle"      : "Contato sobre informações"                   ,
+    "mensageContact"    : "Olá! Desejo mais informações sobre a pagina" 
+
+
+}

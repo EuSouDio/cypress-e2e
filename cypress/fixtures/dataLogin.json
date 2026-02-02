@@ -1,0 +1,6 @@
+{
+    "correctEmail"      : "dionisio.soares.certo@acct.global"   ,
+    "failEmail"         : "dionisio.soares.errado@acct.global"  ,
+    "correctPassword"   : "123456"                              ,
+    "failPassword"      : "246810"
+}
