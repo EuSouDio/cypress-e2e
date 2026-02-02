@@ -15,22 +15,20 @@ jobs:
       matrix:
         include:
           - name: Automacao-1
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+            spec: cypress/e2e/automationExercice/Regression_Excecice.feature
           - name: Automacao-2
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+            spec: cypress/e2e/automationExercice/Outro.feature
           - name: Automacao-3
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+            spec: cypress/e2e/automationExercice/Outro2.feature
           - name: Automacao-4
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+            spec: cypress/e2e/automationExercice/Outro3.feature
           - name: Automacao-5
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+            spec: cypress/e2e/automationExercice/Outro4.feature
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "npm"
