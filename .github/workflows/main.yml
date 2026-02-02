@@ -1,4 +1,4 @@
-name: Cypress E2E (Parallel)
+name: Cypress E2E - Parallel Autos
 
 on:
   push:
@@ -7,43 +7,35 @@ on:
 
 jobs:
   cypress:
-    name: Run Cypress - ${{ matrix.name }}
+    name: Cypress ${{ matrix.auto }}
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - name: Automacao-1
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
-          - name: Automacao-2
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
-          - name: Automacao-3
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
-          - name: Automacao-4
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
-          - name: Automacao-5
-            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+        auto: [auto1, auto2, auto3, auto4, auto5]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Cypress
-        run: npx cypress run --spec "${{ matrix.spec }}"
+      - name: Run Cypress ${{ matrix.auto }}
+        run: npm run cy:${{ matrix.auto }}
 
       - name: Upload Cypress artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-${{ matrix.name }}
+          name: cypress-${{ matrix.auto }}
           path: |
             cypress/videos/**
             cypress/screenshots/**

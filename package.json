@@ -19,11 +19,11 @@
     "cy:run:allure:reg": "cypress run --browser chrome --env allure=true --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature",
     "allure: report": "allure generate allure-results --clean -o allure-report",
    
-    "cy:auto1": "cypress run --browser edge --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature",
-    "cy:auto2": "cypress run --browser edge --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature",
-    "cy:auto3": "cypress run --browser edge --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature",
-    "cy:auto4": "cypress run --browser edge --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature",
-    "cy:auto5": "cypress run --browser edge --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature"
+    "cy:auto1": "cypress run --browser edge --spec cypress/e2e/automationExercice/Regression_Excecice.feature",
+    "cy:auto2": "cypress run --browser edge --spec cypress/e2e/automationExercice/Regression_Excecice.feature",
+    "cy:auto3": "cypress run --browser edge --spec cypress/e2e/automationExercice/Regression_Excecice.feature",
+    "cy:auto4": "cypress run --browser edge --spec cypress/e2e/automationExercice/Regression_Excecice.feature",
+    "cy:auto5": "cypress run --browser edge --spec cypress/e2e/automationExercice/Regression_Excecice.feature"
     
   }
 }
