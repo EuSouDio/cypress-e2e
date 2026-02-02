@@ -8,12 +8,12 @@ on:
 jobs:
   cypress:
     name: Cypress ${{ matrix.auto }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     strategy:
       fail-fast: false
       matrix:
-        auto: [auto1]
+        auto: [auto1, auto2]
 
     steps:
       - name: Checkout repository
