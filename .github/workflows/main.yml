@@ -1,21 +1,52 @@
-name: Automação de Testes Cypress
+name: Cypress E2E (Parallel)
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  testes-e2e:
+  cypress:
+    name: Run Cypress - ${{ matrix.name }}
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Automacao-1
+            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+          - name: Automacao-2
+            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+          - name: Automacao-3
+            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+          - name: Automacao-4
+            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+          - name: Automacao-5
+            spec: cypress-e2e/cypress/e2e/automationExercice/Regression_Excecice.feature
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Instalar dependências
-        run: |
-          npm install
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
 
-      - name: Executar testes Cypress
-        run: |
-          npm run cy:run:reg:chrome
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress
+        run: npx cypress run --spec "${{ matrix.spec }}"
+
+      - name: Upload Cypress artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-${{ matrix.name }}
+          path: |
+            cypress/videos/**
+            cypress/screenshots/**
+          if-no-files-found: ignore
