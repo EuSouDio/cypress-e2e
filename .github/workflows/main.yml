@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false./
       matrix:
-        auto: [auto_runner1, auto_runner2]
+        auto: [auto1, auto2]
 
     steps:
       - name: Checkout repository
