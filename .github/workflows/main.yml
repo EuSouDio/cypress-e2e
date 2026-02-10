@@ -11,7 +11,7 @@ jobs:
     runs-on: self-hosted
 
     strategy:
-      fail-fast: false./
+      fail-fast: false
       matrix:
         auto: [auto1, auto2]
 
