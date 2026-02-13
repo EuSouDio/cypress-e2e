@@ -27,4 +27,4 @@ Execução de testes:
     Clique em E2E Testing > Start E2E Testin in Chrome > googleSearch.feature
 
 Adicionando self-hosted em paralelos
-test 1 runner
+test 2 runner
